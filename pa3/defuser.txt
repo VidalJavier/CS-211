@@ -1,0 +1,9 @@
+747
+You can Russia from land here in Alaska.
+And they have no disregard for hbman life.
+1 4 16 64 256 1024
+1 -29
+60 3
+5 115
+5 1 6 4 3 2
+35
