@@ -1,0 +1,32 @@
+------------------------
+Design Decision & Issues
+------------------------
+
+It was my understanding that a trie data structure would work best 
+for this assignment because of the efficiency of a search algorithm.
+At first I thought of implementing a hash table but then realized I had 
+no way of storing the unique dictionary words in lexicographical order 
+without using a sorting algorithm after each insert. Hence I decided 
+to use a trie because I would be able to store words in lexicographical order 
+by simply using the ascii of each character. This allowed me to create a more 
+efficient program with regards to running time and space complexity.
+
+--------------
+Big O Analysis
+--------------
+
+Using a trie data structure I was able to acheive the following:
+
+Let n be total number of unique words in dictionary file.
+Let m be the total number of words in either dictionary or data fie.
+
+dictionary insert - O(n*k)
+data search - O(m*k)
+space complexity - o(n*k)
+
+Inserting unique word from dictionary file was O(n*k) because I only
+insert each word once into my trie. Searching the trie for matches in
+the data file was O(m*k) because I had to check every word in the data
+file against my trie, regardless if it was present or not. Finally, space
+complexity was O(n*k) because of the aforementioned storing of each word
+only once.
