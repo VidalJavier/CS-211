@@ -1,0 +1,58 @@
+------------------------
+Design Decision & Issues
+------------------------
+
+It was my understanding that a trie data structure would work best 
+for this assignment because of the efficiency of a search algorithm.
+At first I thought of implementing a hash table but then realized I had 
+no way of storing the unique dictionary words in lexicographical order 
+without using a sorting algorithm after each insert. Hence I decided 
+to use a trie because I would be able to store words in lexicographical order 
+by simply using the ascii of each character. This allowed me to create a more 
+efficient program with regards to running time and space complexity.
+
+--------------
+Big O Analysis
+--------------
+
+Using a trie data structure I was able to acheive the following:
+
+Let n be total number of unique words in dictionary file.
+Let m be the total number of words in either dictionary or data fie.
+
+dictionary insert - O(m*k)
+data search - O(m*k)
+space complexity - o(n*k)
+
+Inserting a unique word from dictionary file was O(n*k) because I only
+insert each word once into my trie. Searching the trie for matches in
+the data file was O(m*k) because I had to check every word in the data
+file against my trie, regardless if it was present or not. Finally, space
+complexity was O(n*k) because of the aforementioned storing of each word
+only once.
+
+---------------
+Part 2 emphasis
+---------------
+
+For the second part I had to remove the super word data field of each node
+because I was no longer checking if a word in my trie was a prefix of a word
+in the data file. As a result, I added a prefexes field to replace it, which 
+would count how many times a word in the data file was a prefex of a word in 
+my trie. At first I created another function that would traverse the trie and 
+increment the prefex data field of leaf nodes as necessary. This worked for outputs 
+1-13, but I realized my program was getting killed because it was taking too long 
+and thus didn't produce outputs for 14-17. I then had to rethink of another method
+that would accout for prefexes but didn't do any unnecessary traversals of my trie
+that would evidently cause my program to be kiled. Thus I came up with the following. 
+In order to account for prefexes of words in the dictionary file I added
+every word in data file that was a prefex of a word in my trie in the matchStr function,
+and if it already existed I would just increment the occurence of that leaf node. Then while I 
+printed out to my output file, I kept a counter that would accumulate all the occurences
+of a word before a leaf node in my trie. Then I set the leaf node's prefex field equal to
+that total because that was the total number of words that appeared in the data file
+that were prefexes of each leaf node in my trie. For example, if I had boo, book, and books 
+as words in my trie and the word bo was in the data file, I would add bo to my trie and imcrement
+its occurence by 1, but not make it a leaf node. Then since I only print out leaf nodes in my
+output function I just kept a counter of all word occurences before a leaf node in my trie. Thus
+boo would have 1 prefex, book would have 2 prefexes, and books would have 3 prefexes.
