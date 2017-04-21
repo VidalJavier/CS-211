@@ -16,8 +16,8 @@ Analysis
 --------
 
 After taking a look at the respective hits and misses for each cache, I believe cache A is better suited 
-because it has more hits and less misses than cache B for the trace files. The reason for this is that since
-we zero extend the memory address at the beginning, taking the index bits from the beginning of the binary will
-give the same index for more addresses than taking the index bits from the middle in cache A. As a result of this
-there will be more "collisions" at a particular index and thus, lead to more tag bits being overwritten. This 
-then gives you more misses than hits. 
+because it has more hits and less misses than cache B for the trace files. The reason for this is that 
+since we zero extend the memory address at the beginning, taking the index bits from the beginning of the
+binary will give the same index for more addresses than taking the index bits from the middle in cache A.
+As a result of this there will be more "collisions" at a particular index and thus, lead to more tag bits
+being overwritten. This then gives you more misses than hits. 
