@@ -78,7 +78,7 @@ void readDict(FILE *dict_file){
 
 /* Takes a file pointer to the data file and reads
  *  * every word from the file. Calls matchStr function
- *   * eveytime it finds a word.
+ *   * everytime it finds a word.
  *    */
 void readData(FILE *data_file){
 	char data_word[500];
