@@ -15,7 +15,7 @@ efficient program with regards to running time and space complexity.
 Big O Analysis
 --------------
 
-Using a trie data structure I was able to acheive the following:
+Using a trie data structure I was able to achieve the following:
 
 Let n be total number of unique words in dictionary file.
 Let m be the total number of words in either dictionary or data fie.
