@@ -60,7 +60,7 @@ struct trie *createNode(){
 
 /* Takes a file pointer to the dictionary file and
  * * reads the unique words from the file. Calls insert
- *  *function everytime it finds a word.
+ *  * function everytime it finds a word.
  *   */
 void readDict(FILE *dict_file){
 	char dict_word[500];
