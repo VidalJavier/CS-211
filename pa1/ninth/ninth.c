@@ -24,8 +24,8 @@ int main(int argc, char **argv){
 
 /* Takes a pointer to a file and calls the appropriate
  * * function depending on the character of the file. If
- *  * the structure of the file is incorrect, then it 
- *   * prints out error and terminates the program.
+ *  * the structure of the file is incorrect, prints 
+ *   * out error and terminates the program.
  *    */
 void readFile(FILE *file){
 	char ch;
@@ -111,8 +111,8 @@ void insertNode(int num){
 }
 
 /* Takes a number from the file and searches the BST
- * * for the number. If found prints out present and 
- *  * not found prints out absent.
+ * * for the number. If found prints out present, else
+ *  * prints out absent.
  *   */
 void searchNode(int num){
 	int height = 1;
@@ -143,7 +143,7 @@ void searchNode(int num){
 /* Takes number from file and searches BST for it. If
  * * it finds the number, deletes the node and adjusts 
  *  * the BST accordingly. 
- */
+ *   */
 void deleteNode(int num){
 	if(root == NULL){
 		return;
@@ -284,7 +284,7 @@ void deleteNode(int num){
 	return;
 }
 
-/* Takes a pointer to the BST and delets nodes using a 
+/* Takes a pointer to the BST and deletes nodes using a 
  * * recursive call.
  *  */
 void empty(struct bst *ptr){
