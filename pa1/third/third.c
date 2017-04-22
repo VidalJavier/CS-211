@@ -22,7 +22,7 @@ int main(int argc, char **argv){
 	fclose(file);
 	return 0;
 }
-/* Fills hash table with defualt NULL.
+/* Fills hash table with default NULL.
  * */
 void fillHash(){
 	int i;
