@@ -21,7 +21,7 @@ int main(int argc, char **argv){
 	return 0;
 }
 
-/* Takes a pointer to a file and created three matrices,
+/* Takes a pointer to a file and creates three matrices,
  * * one to hold the first matrix, another to hold the 
  *  * second matrix, and a third one to hold the product
  *   * of the matrices. If the matrices are not possible
