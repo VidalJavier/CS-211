@@ -44,7 +44,7 @@ void readFile(FILE *file){
 	return;
 }
 
-/* Takes a number from the file and inserts it into the linked
+/* Takes a number from the file and inserts it into the linked list
  * * in the correct position.
  *  */
 void insertNode(int current_num){
