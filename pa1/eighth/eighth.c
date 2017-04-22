@@ -25,7 +25,7 @@ int main(int argc, char **argv){
 
 /* Takes a pointer to a file and calls the appropriate function
  * * depending on the character. If structure of file is incorrect
- *  * then prints out error and exits program.
+ *  * prints out error and exits program.
  *   */
 void readFile(FILE *file){
 	char ch;
@@ -44,8 +44,8 @@ void readFile(FILE *file){
        return;
 }
 
-/* Takea a number from the file and inserts it into the BST at
- * * the coorect position.
+/* Takes a number from the file and inserts it into the BST at
+ * * the correct position.
  *  */
 void insert(int num){
 	if(root == NULL){
@@ -110,7 +110,7 @@ void insert(int num){
 }
 
 /* Takes a number from the file and searches the BST for the 
- * * corresponding number. If present them prints out present, 
+ * * corresponding number. If present prints out present, 
  *  * if not prints out absent.
  *   */
 void search(int num){
