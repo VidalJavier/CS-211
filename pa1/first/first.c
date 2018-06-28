@@ -2,6 +2,7 @@
 #include<stdlib.h>
 
 int main(int argc, char **argv){
+	printf("CHANGING\n");
 	if(argc < 2){
 		printf("error\n");
 		exit(0);
