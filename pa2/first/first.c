@@ -10,6 +10,7 @@ int line_count = 1; // keeps count of line number in map_file
 
 int main(int argc, char **argv){
 	FILE *map_file = fopen(argv[1], "r");
+	printf("Changed\n");
 	if(argc != 2 || !map_file){
 		printf("invalid input\n");
 		exit(0);
